@@ -20,17 +20,24 @@ requirements:
   host:
     - python >=2.7
     - pip
+    - wheel
+    - setuptools
   run:
     - python >=2.7
 
 test:
   imports:
     - sortedcontainers
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://www.grantjenks.com/docs/sortedcontainers/
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   summary: 'Python Sorted Container Types: SortedList, SortedDict, and SortedSet'
   description: |
     SortedContainers is a sorted collections library, written in pure-Python
